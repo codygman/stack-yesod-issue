@@ -1,0 +1,20 @@
+Default: &defaults
+  database: snoyman-blog-example.sqlite3
+  poolsize: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: snoyman-blog-example_test.sqlite3
+  <<: *defaults
+
+Staging:
+  database: snoyman-blog-example_staging.sqlite3
+  poolsize: 100
+  <<: *defaults
+
+Production:
+  database: snoyman-blog-example_production.sqlite3
+  poolsize: 100
+  <<: *defaults
